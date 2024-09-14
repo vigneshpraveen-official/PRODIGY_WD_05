@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="animate-header">Weather Now</h1>
+            <p class="animate-subtext">Get current weather updates for your location or anywhere in the world</p>
+        </header>
+
+        <section class="search-box animate-search-box">
+            <input type="text" id="locationInput" placeholder="Enter city name...">
+            <button id="searchBtn" class="btn animate-btn">Search</button>
+        </section>
+
+        <section class="weather-info animate-weather-info">
+            <div class="weather-box">
+                <h2 id="locationName" class="animate-location">--</h2>
+                <p id="description" class="animate-description">--</p>
+                <h3 id="temperature" class="animate-temperature">-- °C</h3>
+                <p id="humidity" class="animate-humidity">Humidity: --%</p>
+                <p id="windSpeed" class="animate-wind-speed">Wind Speed: -- m/s</p>
+            </div>
+        </section>
+
+        <footer class="animate-footer-no">
+            <p>Powered by OpenWeather API</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

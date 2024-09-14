@@ -1,0 +1,251 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0A2342; /* Dark Blue */
+    color: #ffffff; /* White */
+    overflow-x: hidden;
+}
+
+.container {
+    text-align: center;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Section */
+header {
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 700;
+    letter-spacing: 5px;
+    color: #00FF7F; /* Green */
+}
+
+p {
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+/* Animations */
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateY(-100px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes zoomIn {
+    0% { opacity: 0; transform: scale(0.5); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes rotateIn {
+    0% { opacity: 0; transform: rotate(-360deg); }
+    100% { opacity: 1; transform: rotate(0deg); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Animate Header Elements */
+.animate-header {
+    animation: slideIn 1.5s ease-in-out;
+}
+
+.animate-subtext {
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Search Box */
+.search-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.search-box input {
+    width: 40%;
+    padding: 15px;
+    font-size: 1.1em;
+    border: 2px solid #00FF7F; /* Green */
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.search-box input:focus {
+    border-color: #FF4500; /* Red */
+}
+
+.search-box button {
+    padding: 15px 30px;
+    margin-left: 10px;
+    background-color: #FF4500; /* Red */
+    border: none;
+    color: #ffffff;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.search-box button:hover {
+    background-color: #00FF7F; /* Green */
+    transform: scale(1.05);
+}
+
+.animate-search-box {
+    animation: slideIn 2s 0.5s ease-in-out;
+}
+
+/* Weather Info Section */
+.weather-info {
+    margin-top: 30px;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    color: #000;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.weather-box h2, .weather-box p, .weather-box h3 {
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+.weather-box h2 {
+    font-size: 2.5em;
+    color: #FF4500; /* Red */
+    letter-spacing: 3px;
+}
+
+.weather-box h3 {
+    font-size: 2em;
+    color: #00FF7F; /* Green */
+}
+
+.weather-box p {
+    font-size: 1.2em;
+    color: #0A2342; /* Dark Blue */
+}
+
+.animate-weather-info {
+    animation: zoomIn 1.5s 1s ease-in-out;
+}
+
+.animate-location {
+    animation: pulse 2s infinite;
+}
+
+.animate-description {
+    animation: rotateIn 2s ease-in-out;
+}
+
+.animate-temperature {
+    animation: pulse 1.5s 1s infinite;
+}
+
+.animate-humidity, .animate-wind-speed {
+    animation: fadeIn 2s 1.5s ease-in-out;
+}
+
+/* Adding Gradient Background for Weather Box */
+.weather-box {
+    background: linear-gradient(145deg, #e6e6e6, #f0f0f0);
+    box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
+}
+
+/* Footer Section */
+footer {
+    margin-top: 50px;
+}
+
+.animate-footer {
+    animation: fadeIn 2s 1s ease-in-out;
+    font-size: 1.1em;
+    color: #FF4500; /* Red */
+}
+
+footer p {
+    font-size: 1.1em;
+    letter-spacing: 1px;
+}
+
+/* Additional Animations for Enhanced Visuals */
+@keyframes bounceIn {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes slideLeft {
+    0% { transform: translateX(100px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideRight {
+    0% { transform: translateX(-100px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+.animate-footer {
+    animation: bounceIn 2s infinite;
+}
+
+.animate-search-box {
+    animation: slideLeft 1s ease-in-out;
+}
+
+.animate-weather-info {
+    animation: slideRight 1.5s ease-in-out;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .search-box input {
+        width: 70%;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .weather-box h2 {
+        font-size: 2em;
+    }
+
+    .weather-box h3 {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-box input {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .weather-box h2 {
+        font-size: 1.8em;
+    }
+
+    .weather-box h3 {
+        font-size: 1.5em;
+    }
+}

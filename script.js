@@ -1,4 +1,4 @@
-const apiKey = 'ea96c69aff8dab6f6b1be765c0ef4b8a'; //API key
+const apiKey = 'your API Key'; //API key
 
 // Function to fetch weather data based on user input or geolocation
 async function getWeather(location) {
